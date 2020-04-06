@@ -41,6 +41,10 @@ private int mQuantity=0;
         display(++mQuantity);
     }
     public void decrement(View view){
+        if(mQuantity<=1)
+        {
+            display(mQuantity=1);
+        }
         display(--mQuantity);
     }
 }
