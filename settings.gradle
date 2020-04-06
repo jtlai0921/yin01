@@ -1,0 +1,2 @@
+rootProject.name='yin01'
+include ':app'
