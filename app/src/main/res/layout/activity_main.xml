@@ -8,14 +8,37 @@
         android:layout_margin="16dp"
         tools:context=".MainActivity">
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:textAllCaps="true"
         android:text="Quantity"
+        tools:ignore="DuplicateIds" />
+
+    <CheckBox
+        android:id="@+id/toppings_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="口罩"
+        android:onClick="clickManager"
         />
 
+
+
+    <CheckBox
+        android:id="@+id/酒精"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="酒精"
+        android:onClick="clickManager"
+         />
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <Button
+        android:id="@+id/btn_inc"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="+"
@@ -31,13 +54,17 @@
         android:textSize="16sp"
         />
     <Button
+        android:id="@+id/btn_dec"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
         android:text="-"
         android:onClick="decrement"
         />
+</LinearLayout>
+
     <TextView
+        android:id="@+id/order_summary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -45,15 +72,17 @@
         android:text="Price"
         android:textSize="16sp"
          />
+
     <TextView
         android:id="@+id/price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="NT$0"
-        android:textColor="@android:color/black"
-         />
+        android:textColor="@android:color/black" />
+
     <Button
+        android:id="@+id/btn_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="order"
